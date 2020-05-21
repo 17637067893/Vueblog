@@ -19,7 +19,7 @@
 				:before-upload="handleBeforeUpload"
 				multiple
 				type="drag"
-				action="http://localhost:3000/uploadImg"
+				action="http://39.105.146.1:3000/uploadImg"
 				style="display: inline-block;width:200px;height: 126px;margin-bottom: 16px;">
 				<div style="width: 200px;height:125px;line-height: 140px;">
 					<Icon type="ios-camera" size="60"></Icon>

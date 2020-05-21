@@ -3,7 +3,7 @@
 		<Dropdown placement="bottom"  @on-click="showItem" trigger="hover">
 			<div class="down">
 				<div class="infoTxt">{{$store.state.username}}</div>
-				<img class="img" :src="$store.state.username" alt="">
+				<img class="img" :src="$store.state.img" alt="">
 				<Icon type="md-arrow-dropdown-circle"></Icon>
 			</div>
 			<DropdownMenu slot="list">
@@ -22,6 +22,7 @@
 		},
 		created(){
 			_this = this;
+			console.log(this.$store.state)
 		},
 		methods:{
 			showItem(name){

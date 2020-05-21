@@ -19,14 +19,14 @@
 								<ul id="card">
 									<li :class="{ 'active': isActive }">
 										<!--输入框-->
-										<div class="login_bot_count">
+										<div class="login_bot_count" style="margin-top:38px;">
 											<img src="../../static/img/tubiao-07.png" alt="" />
 											<input @change="checkname" type="" v-model="username" name="" id="" placeholder="请输入账号"id="one" />
 										</div>
 										<div class="err-box">
 											<span v-show="showUser2" class="err-word">用户名不存在</span>
 										</div>
-										<div class="login_bot_count">
+										<div class="login_bot_count" style="margin-top:38px;">
 											<img src="../../static/img/tubiao-06.png" alt="" />
 											<input type="password"  v-model="password" name="" id="" placeholder="请输入密码"id="one"  />
 										</div>
@@ -38,7 +38,7 @@
 											<p><input type="checkbox" name="vehicle" value="Bike" />记住密码</p>
 										</div> -->
 										<!--登录按钮-->
-										<button @keyup.enter="enterLogin" @click="login" class="login_button">登录</button>
+										<button style="margin-top:38px;"  @keyup.enter="enterLogin" @click="login" class="login_button">登录</button>
 									</li>
 									<li class="login_account" :class="{ 'active': !isActive }">
 										<div>
@@ -166,6 +166,7 @@
 				}
 				this.$ajax1.post("/checkname",obj)
 				.then(res => {
+					console.log("返回数据",res)
 					if(res.data.data.data == "exist"){
 						_this.showUser1 = true;
 						_this.showUser2 = false
@@ -374,7 +375,7 @@
 	
 	#all {
 		width: 80%;
-		margin: 50px auto 0px;
+		margin: 15px auto 0px;
 	}
 	
 	#option {

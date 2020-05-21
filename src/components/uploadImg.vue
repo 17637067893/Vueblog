@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-		<div class="demo-upload-list" v-show="showImg">
+		<div class="demo-upload-list" v-show="$store.state.img">
 		    <template >
 		        <img :src="$store.state.img">
 		        <div class="demo-upload-list-cover">
@@ -17,7 +17,7 @@
 		    :before-upload="handleBeforeUpload"
 		    multiple
 		    type="drag"
-		    action="http://localhost:3000/uploadImg"
+		    action="http://39.105.146.1:3000/uploadImg"
 		    style="display: inline-block;width:58px;height: 58px;overflow: hidden;">
 		    <div style="width:58px;height:58px;line-height: 58px;">
 		        <Icon type="ios-camera" size="20"></Icon>
@@ -60,7 +60,6 @@
             }
         },
         mounted () {
-            // this.uploadList = this.$refs.upload.fileList;
         }
     }
 </script>

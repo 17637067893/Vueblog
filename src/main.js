@@ -7,7 +7,8 @@ import 'view-design/dist/styles/iview.css';
 import obj from '@/api/index'
 import axios from 'axios'
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = 'http://39.105.146.1:3000';
+// axios.defaults.baseURL = 'http://localhost:3000';
 // axios.interceptors.request.use(
 //  config => {
 //   config.baseURL = 'http://localhost:8080'
